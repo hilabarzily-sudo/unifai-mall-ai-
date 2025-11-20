@@ -7,6 +7,7 @@
 ## 📝 צעדים:
 
 ### 1. צור קובץ בשם `.env` (ללא שום סיומת) בתיקייה:
+
 ```
 D:\unifai-mall-ai--main\unifai-mall-ai--main\
 ```
@@ -27,6 +28,7 @@ VITE_SUPABASE_ANON_KEY=your-anon-key-here
 ### 3. שמור את הקובץ
 
 ### 4. ודא שהקובץ נוצר נכון:
+
 - הקובץ צריך להיקרא בדיוק `.env` (עם נקודה בהתחלה)
 - הקובץ צריך להיות בתיקייה הראשית של הפרויקט
 - הקובץ כבר מופיע ב-.gitignore ולא יעלה ל-Git
@@ -34,6 +36,7 @@ VITE_SUPABASE_ANON_KEY=your-anon-key-here
 ## ✅ בדיקה
 
 אחרי יצירת הקובץ, הרץ:
+
 ```bash
 npm run dev
 ```
@@ -43,9 +46,9 @@ npm run dev
 ## ❌ אם יש שגיאה
 
 אם אתה רואה שגיאה כמו:
+
 ```
 Missing Supabase environment variables
 ```
 
 זה אומר שהקובץ `.env` לא נוצר נכון או לא במיקום הנכון.
-
