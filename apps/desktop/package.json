@@ -1,0 +1,54 @@
+{
+  "name": "@unifai/desktop",
+  "version": "2.0.0",
+  "private": true,
+  "description": "UnifAI Mall - Desktop Application (Electron)",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:electron\"",
+    "dev:web": "cd ../web && npm run dev",
+    "dev:electron": "wait-on http://localhost:3000 && electron .",
+    "build": "npm run build:web && electron-builder",
+    "build:web": "cd ../web && npm run build",
+    "build:win": "npm run build:web && electron-builder --win",
+    "build:mac": "npm run build:web && electron-builder --mac",
+    "build:linux": "npm run build:web && electron-builder --linux",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "electron-updater": "^6.6.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.unifai.mall",
+    "productName": "UnifAI Mall",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "../web/.next/**/*",
+      "../web/public/**/*"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": ["dmg"],
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "build/icon.png"
+    }
+  }
+}
+

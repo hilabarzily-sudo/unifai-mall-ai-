@@ -1,287 +1,251 @@
-# 🎨 UnifAI Screens - Complete UI Components Collection
+# 🎨 UnifAI Mall - Monorepo
 
-**"Spotify for AI Tools" - Complete 14 Screens**
+**"Spotify for AI Tools"** - Multi-platform AI Tools Marketplace
 
-[![OS26](https://img.shields.io/badge/Design-OS26-blue)](https://os26.design)
-[![Glassmorphism](https://img.shields.io/badge/Style-Glassmorphism-lightgrey)](https://glassmorphism.com)
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-5.0.8-646CFF?logo=vite)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.0-black)](https://nextjs.org/)
+[![React Native](https://img.shields.io/badge/React_Native-0.72-blue)](https://reactnative.dev/)
+[![Turborepo](https://img.shields.io/badge/Turborepo-1.11-red)](https://turbo.build/)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
----
+## 🏗️ Architecture
 
-## 🎯 Overview
+This is a **Turborepo monorepo** containing:
 
-Complete collection of **14 React screen components** for the UnifAI application - an AI tools marketplace inspired by Spotify's UX.
+- 🌐 **Web App** (Next.js) - Progressive web application
+- 📱 **Mobile App** (React Native) - iOS & Android
+- 💻 **Desktop App** (Electron) - Windows, macOS, Linux
+- 📦 **Shared Packages** - Business logic, UI components, Supabase client
 
-Built with **OS26 Design System** and **Glassmorphism** styling, featuring smooth animations, responsive design, and RTL support.
+```
+unifai-mall-monorepo/
+├── apps/
+│   ├── web/                # Next.js web app
+│   ├── mobile/             # React Native mobile app
+│   └── desktop/            # Electron desktop app
+├── packages/
+│   ├── shared-logic/       # Business logic & utilities
+│   ├── ui-components/      # Shared React components
+│   └── supabase-client/    # Database & auth services
+├── supabase/               # Database migrations & functions
+└── docs/                   # Documentation
 
----
-
-## ✨ Features
-
-- 🎨 **14 Complete Screens** - Ready to use
-- 🪟 **Glassmorphism UI** - Beautiful glass effects
-- 🎭 **OS26 Design System** - Professional styling
-- 📱 **Fully Responsive** - Mobile to Desktop
-- 🌐 **RTL Support** - Hebrew ready
-- ♿ **Accessible** - ARIA labels included
-- 🎬 **Smooth Animations** - CSS + JS
-- 📦 **Mock Data** - For testing
-- 📚 **Full Documentation** - 10 MD files
-- ⚡ **Production Ready** - Build scripts included
-
----
+```
 
 ## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ and npm 9+
+- For mobile: Android Studio / Xcode
+- For desktop: Electron dependencies
+
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/hilabarzily-sudo/unifai-mall-ai-.git
+cd unifai-mall-ai-
 
-# Navigate to screens folder
-cd unifai-mall-ai-/
-
-# Install dependencies
+# Install all dependencies
 npm install
 
-# Run development server
-npm run dev
+# Setup environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
+# Start development
+npm run dev          # Start all apps
+npm run dev:web      # Start web app only
+npm run dev:mobile   # Start mobile app only
+npm run dev:desktop  # Start desktop app only
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser! 🎉
+## 📱 Apps
 
----
+### Web App (`apps/web`)
 
-## 📱 Screens Included
+Next.js 14 with App Router, TypeScript, and Tailwind CSS.
 
-| # | Screen | Description |
-|---|--------|-------------|
-| 1 | **SplashScreen** | Animated splash with logo |
-| 2 | **AuthPopup** | Sign in/up with Google, Apple, Email |
-| 3 | **HomePage** | Dynamic home with Wolt logic |
-| 4 | **ToolPage** | Tool details (App Store style) |
-| 5 | **ExamplesGrid** | Pinterest-style examples |
-| 6 | **ExampleViewer** | Sora-style example viewer |
-| 7 | **PromptRevealSheet** | Prompt bottom sheet |
-| 8 | **ToolWebView** | WebView popup for tools |
-| 9 | **FavoritesPage** | Saved tools & prompts |
-| 10 | **SavedPromptsSlider** | Prompts slider component |
-| 11 | **SearchPage** | Universal search |
-| 12 | **AccountPage** | User account (App Store style) |
-| 13 | **AccountSettingsSheet** | Settings bottom sheet |
-| 14 | **EmptyState** | Reusable empty state |
-
----
-
-## 🎨 Design System
-
-### Glassmorphism Style
-
-```css
-background: rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(24px);
-border: 1px solid rgba(255, 255, 255, 0.2);
-border-radius: 16px-32px;
+```bash
+cd apps/web
+npm run dev      # Start dev server on http://localhost:3000
+npm run build    # Build for production
+npm run start    # Start production server
 ```
 
-### Color Palette
+### Mobile App (`apps/mobile`)
 
-```css
---bg-primary: #f6f7fb;
---bg-secondary: #eef1f8;
---glass-light: rgba(255, 255, 255, 0.4);
---glass-strong: rgba(255, 255, 255, 0.6);
---glass-intense: rgba(255, 255, 255, 0.8);
---border: rgba(255, 255, 255, 0.2-0.4);
---primary: #111827;
+React Native for iOS and Android.
+
+```bash
+cd apps/mobile
+npm run android  # Run on Android
+npm run ios      # Run on iOS (Mac only)
+npm run start    # Start Metro bundler
 ```
 
----
+### Desktop App (`apps/desktop`)
 
-## 📂 Project Structure
+Electron wrapper around the web app.
 
-```
-unifai-mall-ai-/
-├── 01-SplashScreen.jsx          # Splash screen
-├── 02-AuthPopup.jsx             # Authentication
-├── 03-HomePage.jsx              # Home page
-├── 04-ToolPage.jsx              # Tool details
-├── 05-ExamplesGrid.jsx          # Examples grid
-├── 06-ExampleViewer.jsx         # Example viewer
-├── 07-PromptRevealSheet.jsx    # Prompt sheet
-├── 08-ToolWebView.jsx           # WebView
-├── 09-FavoritesPage.jsx         # Favorites
-├── 10-SavedPromptsSlider.jsx   # Prompts slider
-├── 11-SearchPage.jsx            # Search
-├── 12-AccountPage.jsx           # Account
-├── 13-AccountSettingsSheet.jsx # Settings
-├── 14-EmptyState.jsx            # Empty state
-├── App.jsx                      # Main app
-├── package.json                 # Dependencies
-├── tailwind.config.js           # Tailwind config
-└── README.md                    # Documentation
+```bash
+cd apps/desktop
+npm run dev            # Start in development mode
+npm run build:win      # Build for Windows
+npm run build:mac      # Build for macOS
+npm run build:linux    # Build for Linux
 ```
 
----
+## 📦 Packages
 
-## 📚 Documentation
+### `@repo/shared-logic`
 
-Comprehensive documentation included:
+Business logic, utilities, and data transformers.
 
-- **START_HERE.md** - Quick start guide
-- **RUN.md** - Run instructions
-- **VISUAL_GUIDE.md** - Visual reference (ASCII art)
-- **README.md** - Technical documentation
-- **INSTALLATION.md** - Installation guide
-- **QUICK_REFERENCE.md** - Quick reference card
-- **CHECKLIST.md** - Project checklist
-- **SUMMARY.md** - Project summary
-- **FINAL_STATUS.md** - Final status report
+```typescript
+import { transformTool, formatRelativeTime } from '@repo/shared-logic'
+```
 
----
+### `@repo/ui-components`
 
-## 🛠️ Tech Stack
+Shared React components (Button, Card, Badge, etc.).
 
-- **React** 18.2.0 - UI library
-- **Vite** 5.0.8 - Build tool
-- **Tailwind CSS** 3.4.0 - Styling
-- **PostCSS** 8.4.32 - CSS processing
-- **Autoprefixer** 10.4.16 - CSS prefixing
+```typescript
+import { Button, Card, Badge } from '@repo/ui-components'
+```
 
----
+### `@repo/supabase-client`
 
-## 📦 Scripts
+Supabase client wrapper with typed queries.
+
+```typescript
+import { initializeSupabase, toolsDB, authService } from '@repo/supabase-client'
+```
+
+## 🗄️ Database
+
+Supabase PostgreSQL database with:
+
+- Tools & Categories
+- User Authentication
+- Favorites & Saved Prompts
+- Tool Examples & Reviews
+- Row Level Security (RLS)
+
+See `supabase/README.md` for setup instructions.
+
+## 🛠️ Development
+
+### Available Scripts
 
 ```bash
 # Development
-npm run dev        # Start dev server (port 3000)
+npm run dev              # Start all apps in development
+npm run dev:web          # Web app only
+npm run dev:mobile       # Mobile app only
+npm run dev:desktop      # Desktop app only
 
-# Production
-npm run build      # Build for production
-npm run preview    # Preview production build
+# Building
+npm run build            # Build all apps
+npm run build:web        # Web app only
+npm run build:mobile     # Mobile app only
+npm run build:desktop    # Desktop app only
+
+# Testing & Linting
+npm run lint             # Lint all packages
+npm run test             # Run all tests
+
+# Maintenance
+npm run clean            # Clean all build artifacts
 ```
 
----
-
-## 🎯 User Flow
+### Project Structure
 
 ```
-Splash (1.2s) → Home Page
-                   ├→ Search → Tool Page
-                   ├→ Tool Card → Tool Page → Examples → WebView
-                   ├→ Favorites → Saved Content
-                   └→ Account → Settings
+├── apps/                          # Applications
+│   ├── web/                       # Next.js web app
+│   │   ├── src/app/              # App Router pages
+│   │   ├── src/components/       # Web-specific components
+│   │   └── public/               # Static assets
+│   ├── mobile/                    # React Native app
+│   │   ├── src/screens/          # Mobile screens
+│   │   ├── src/components/       # Mobile components
+│   │   ├── android/              # Android native code
+│   │   └── ios/                  # iOS native code
+│   └── desktop/                   # Electron app
+│       ├── main.cjs              # Electron main process
+│       └── preload.cjs           # Preload script
+├── packages/                      # Shared packages
+│   ├── shared-logic/             # Business logic
+│   │   ├── src/algorithms/      # Algorithms
+│   │   ├── src/utils/           # Utilities
+│   │   └── src/types/           # TypeScript types
+│   ├── ui-components/            # UI components
+│   │   └── src/                 # Component source
+│   └── supabase-client/          # Supabase wrapper
+│       ├── src/auth/            # Auth services
+│       ├── src/database/        # Database queries
+│       └── src/client.ts        # Client setup
+├── supabase/                      # Supabase configuration
+│   ├── migrations/              # SQL migrations
+│   ├── functions/               # Edge functions
+│   └── config.toml             # Local config
+├── docs/                          # Documentation
+├── turbo.json                     # Turborepo configuration
+├── package.json                   # Root package.json
+└── tsconfig.json                  # Base TypeScript config
 ```
 
----
+## 🎨 Design System
 
-## 💡 Usage Example
+- **OS26** design system
+- **Glassmorphism** UI style
+- **Tailwind CSS** for styling
+- **RTL Support** for Hebrew
 
-```jsx
-import HomePage from './03-HomePage';
-import ToolPage from './04-ToolPage';
+## 🔐 Environment Variables
 
-function App() {
-  const [selectedTool, setSelectedTool] = useState(null);
+Required environment variables:
 
-  return selectedTool ? (
-    <ToolPage tool={selectedTool} />
-  ) : (
-    <HomePage onOpenTool={setSelectedTool} />
-  );
-}
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ```
 
----
+See `.env.example` for all available options.
 
-## 🎨 Sketch Integration
+## 📚 Documentation
 
-Perfect for designers! Each screen is documented with:
-- ASCII art layout diagrams
-- Exact measurements
-- Color specifications
-- Typography details
-- Component breakdown
-
-See **VISUAL_GUIDE.md** for complete visual documentation.
-
----
-
-## 🌟 Highlights
-
-- ✅ **Complete Flow** - All screens interconnected
-- ✅ **Auth System** - Multiple trigger types
-- ✅ **Dynamic Home** - Wolt-style sections
-- ✅ **Tool Pages** - App Store inspired
-- ✅ **Examples System** - Pinterest + Sora style
-- ✅ **Favorites** - Full save system
-- ✅ **Search** - Universal search
-- ✅ **Account** - Complete user management
-- ✅ **Settings** - Full customization
-- ✅ **Navigation** - Smooth transitions
-
----
-
-## 📊 Statistics
-
-```
-📁 Files:          34
-📝 Lines of Code:  ~9,000
-💾 Components:     14
-📚 Documentation:  10 files
-🎨 Design System:  OS26 + Glassmorphism
-```
-
----
+- [Architecture](./docs/ARCHITECTURE.md) - System architecture overview
+- [Supabase Setup](./supabase/README.md) - Database setup guide
+- [Web App](./apps/web/README.md) - Web app documentation
+- [Mobile App](./apps/mobile/README.md) - Mobile app documentation
+- [Desktop App](./apps/desktop/README.md) - Desktop app documentation
 
 ## 🤝 Contributing
 
-This is a complete UI kit. Feel free to:
-- Use in your projects
-- Customize to your needs
-- Learn from the code
-- Share with others
+This project uses:
 
----
+- **Turborepo** for monorepo management
+- **TypeScript** for type safety
+- **ESLint** for code quality
+- **Prettier** for code formatting
+
+See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines.
 
 ## 📄 License
 
-MIT License - Free to use and modify
-
----
+MIT License - see [LICENSE](./LICENSE) for details.
 
 ## 🔗 Links
 
-- **GitHub Repository:** [unifai-mall-ai-](https://github.com/hilabarzily-sudo/unifai-mall-ai-.git)
-- **OS26 Design:** [os26.design](https://os26.design)
-- **React Docs:** [react.dev](https://react.dev)
-- **Tailwind CSS:** [tailwindcss.com](https://tailwindcss.com)
+- **Repository**: https://github.com/hilabarzily-sudo/unifai-mall-ai-
+- **Issues**: https://github.com/hilabarzily-sudo/unifai-mall-ai-/issues
+- **Supabase**: https://supabase.com
 
 ---
 
-## 📞 Support
+**Built with ❤️ by the UnifAI Team**
 
-For questions or issues:
-1. Check the documentation files
-2. Review VISUAL_GUIDE.md for screen layouts
-3. See INSTALLATION.md for setup help
-
----
-
-## 🎉 Ready to Use!
-
-All files are tested and production-ready. Just clone, install, and run!
-
-```bash
-npm install && npm run dev
-```
-
-**Built with ❤️ for UnifAI**  
-**OS26 Design System + Glassmorphism**  
-**Version 1.0.0**
-
----
-
-⭐ **Star this repo if you find it useful!**
-
+**Version 2.0.0** - Monorepo Architecture
