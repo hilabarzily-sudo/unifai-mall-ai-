@@ -1,0 +1,40 @@
+// Jest setup file
+import '@testing-library/jest-dom';
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  takeRecords() { return []; }
+  unobserve() {}
+};
+
+// Mock navigator
+Object.defineProperty(window, 'navigator', {
+  value: {
+    clipboard: {
+      writeText: jest.fn(() => Promise.resolve()),
+    },
+    serviceWorker: {
+      register: jest.fn(() => Promise.resolve()),
+    },
+  },
+  writable: true,
+});
+

@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "name": "unifai-mall",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "max-age=31536000, immutable"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "@unifai-supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "@unifai-supabase-key"
+  }
+}
+

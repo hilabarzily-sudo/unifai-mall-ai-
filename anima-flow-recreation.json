@@ -1,0 +1,218 @@
+{
+  "projectName": "Anima Playground Demo",
+  "description": "Recreation of the Anima app flow from dev.animaapp.com",
+  "version": "1.0.0",
+  "screens": [
+    {
+      "id": "app",
+      "name": "App",
+      "type": "Component",
+      "filePath": "src/App.tsx",
+      "isRootScreen": true,
+      "description": "Main application component - entry point",
+      "props": [],
+      "connections": [
+        {
+          "to": "discover-page",
+          "trigger": "navigation",
+          "type": "home"
+        }
+      ],
+      "position": {
+        "x": 310,
+        "y": 825
+      }
+    },
+    {
+      "id": "discover-page",
+      "name": "DiscoverPage",
+      "type": "Screen",
+      "filePath": "src/pages/DiscoverPage.tsx",
+      "isHomeScreen": true,
+      "description": "Main discovery/home page - browse content",
+      "props": [],
+      "connections": [],
+      "position": {
+        "x": 535,
+        "y": 825
+      }
+    },
+    {
+      "id": "categories-page",
+      "name": "CategoriesPage",
+      "type": "Screen",
+      "filePath": "src/pages/CategoriesPage.tsx",
+      "description": "Browse items by categories",
+      "props": [
+        {
+          "name": "categories",
+          "type": "array"
+        }
+      ],
+      "connections": [],
+      "position": {
+        "x": 310,
+        "y": 350
+      }
+    },
+    {
+      "id": "search-page",
+      "name": "SearchPage",
+      "type": "Screen",
+      "filePath": "src/pages/SearchPage.tsx",
+      "description": "Search functionality page",
+      "props": [
+        {
+          "name": "search",
+          "type": "string"
+        }
+      ],
+      "connections": [],
+      "position": {
+        "x": 310,
+        "y": 470
+      }
+    },
+    {
+      "id": "saved-page",
+      "name": "SavedPage",
+      "type": "Screen",
+      "filePath": "src/pages/SavedPage.tsx",
+      "description": "User's saved/bookmarked items",
+      "props": [
+        {
+          "name": "saved",
+          "type": "array"
+        }
+      ],
+      "connections": [],
+      "position": {
+        "x": 310,
+        "y": 590
+      }
+    },
+    {
+      "id": "profile-page",
+      "name": "ProfilePage",
+      "type": "Screen",
+      "filePath": "src/pages/ProfilePage.tsx",
+      "description": "User profile and settings",
+      "props": [
+        {
+          "name": "profile",
+          "type": "object"
+        }
+      ],
+      "connections": [],
+      "position": {
+        "x": 310,
+        "y": 710
+      }
+    }
+  ],
+  "navigation": {
+    "type": "tab-navigation",
+    "tabs": [
+      {
+        "id": "discover",
+        "label": "Discover",
+        "icon": "home",
+        "screen": "discover-page"
+      },
+      {
+        "id": "categories",
+        "label": "Categories",
+        "icon": "grid",
+        "screen": "categories-page"
+      },
+      {
+        "id": "search",
+        "label": "Search",
+        "icon": "search",
+        "screen": "search-page"
+      },
+      {
+        "id": "saved",
+        "label": "Saved",
+        "icon": "bookmark",
+        "screen": "saved-page"
+      },
+      {
+        "id": "profile",
+        "label": "Profile",
+        "icon": "user",
+        "screen": "profile-page"
+      }
+    ]
+  },
+  "flowDiagram": {
+    "description": "Visual representation of screen connections",
+    "nodes": [
+      {
+        "id": "app",
+        "label": "App",
+        "type": "component"
+      },
+      {
+        "id": "discover-page",
+        "label": "DiscoverPage",
+        "type": "screen"
+      },
+      {
+        "id": "categories-page",
+        "label": "CategoriesPage",
+        "type": "screen"
+      },
+      {
+        "id": "search-page",
+        "label": "SearchPage",
+        "type": "screen"
+      },
+      {
+        "id": "saved-page",
+        "label": "SavedPage",
+        "type": "screen"
+      },
+      {
+        "id": "profile-page",
+        "label": "ProfilePage",
+        "type": "screen"
+      }
+    ],
+    "edges": [
+      {
+        "from": "app",
+        "to": "discover-page",
+        "type": "direct-navigation"
+      },
+      {
+        "from": "discover-page",
+        "to": "categories-page",
+        "type": "tab-navigation"
+      },
+      {
+        "from": "discover-page",
+        "to": "search-page",
+        "type": "tab-navigation"
+      },
+      {
+        "from": "discover-page",
+        "to": "saved-page",
+        "type": "tab-navigation"
+      },
+      {
+        "from": "discover-page",
+        "to": "profile-page",
+        "type": "tab-navigation"
+      }
+    ]
+  },
+  "metadata": {
+    "created": "2025-11-17",
+    "framework": "React",
+    "language": "TypeScript",
+    "source": "dev.animaapp.com demo",
+    "toolVersion": "Anima 5.0"
+  }
+}
+

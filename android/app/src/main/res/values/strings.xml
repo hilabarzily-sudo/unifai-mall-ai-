@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">UnifAI Mall</string>
+    <string name="title_activity_main">UnifAI Mall</string>
+    <string name="package_name">com.unifai.mall</string>
+    <string name="custom_url_scheme">com.unifai.mall</string>
+</resources>

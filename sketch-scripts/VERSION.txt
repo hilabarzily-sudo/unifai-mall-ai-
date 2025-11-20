@@ -1,0 +1,21 @@
+UnifAI Sketch Scripts Collection
+================================
+
+Version: 1.0.0
+Release Date: November 17, 2024
+Design System: OS26 + Glassmorphism
+Platform: Sketch (macOS)
+
+---
+
+Package Contents:
+- 14 Screen Scripts
+- Complete Documentation (6 docs)
+- Design Tokens (3 JSON files)
+- Usage Examples (3 files)
+- Total Files: 26+
+
+---
+
+Verified & Production Ready ✅
+

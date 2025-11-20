@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifAI Color Palette",
+  "version": "1.0.0",
+  "colors": {
+    "background": {
+      "primary": "#f6f7fb",
+      "secondary": "#eef1f8",
+      "tertiary": "#e8ebf3"
+    },
+    "glass": {
+      "light": "rgba(255, 255, 255, 0.4)",
+      "medium": "rgba(255, 255, 255, 0.6)",
+      "strong": "rgba(255, 255, 255, 0.8)",
+      "subtle": "rgba(255, 255, 255, 0.2)"
+    },
+    "borders": {
+      "glass-light": "rgba(255, 255, 255, 0.2)",
+      "glass-medium": "rgba(255, 255, 255, 0.3)",
+      "glass-strong": "rgba(255, 255, 255, 0.4)",
+      "standard": "rgba(229, 231, 235, 0.5)"
+    },
+    "text": {
+      "primary": "#111827",
+      "secondary": "#6B7280",
+      "tertiary": "#9CA3AF",
+      "placeholder": "#D1D5DB",
+      "on-dark": "#FFFFFF",
+      "on-dark-secondary": "rgba(255, 255, 255, 0.8)"
+    },
+    "buttons": {
+      "primary": "#111827",
+      "primary-hover": "#000000",
+      "secondary": "rgba(255, 255, 255, 0.8)",
+      "secondary-hover": "rgba(255, 255, 255, 1)"
+    },
+    "accent": {
+      "blue": "#2563EB",
+      "blue-light": "#EFF6FF",
+      "blue-border": "#BFDBFE",
+      "yellow": "#F59E0B",
+      "yellow-light": "#FEF3C7",
+      "yellow-border": "#FDE68A",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    },
+    "backdrop": {
+      "blur": "rgba(0, 0, 0, 0.3)",
+      "light": "rgba(0, 0, 0, 0.1)"
+    }
+  }
+}
+

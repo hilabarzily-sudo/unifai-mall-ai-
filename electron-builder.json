@@ -1,0 +1,99 @@
+{
+  "appId": "com.unifai.mall",
+  "productName": "UnifAI Mall",
+  "copyright": "Copyright © 2024 UnifAI Team",
+  "directories": {
+    "output": "dist-electron",
+    "buildResources": "public"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*.cjs",
+    "package.json"
+  ],
+  "extraMetadata": {
+    "main": "electron/main.cjs"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64", "arm64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/icons/icon-512x512.png",
+    "artifactName": "${productName}-${version}-${arch}.${ext}",
+    "publisherName": "UnifAI Team",
+    "verifyUpdateCodeSignature": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "UnifAI Mall",
+    "installerIcon": "public/icons/icon-512x512.png",
+    "uninstallerIcon": "public/icons/icon-512x512.png"
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.exe"
+  },
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      },
+      {
+        "target": "zip",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "icon": "public/icons/icon-512x512.png",
+    "category": "public.app-category.productivity",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false,
+    "entitlements": "build/entitlements.mac.plist",
+    "entitlementsInherit": "build/entitlements.mac.plist"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ],
+    "window": {
+      "width": 540,
+      "height": 380
+    }
+  },
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb",
+      "rpm",
+      "snap"
+    ],
+    "icon": "public/icons",
+    "category": "Utility",
+    "synopsis": "Spotify for AI Tools",
+    "description": "UnifAI Mall - Discover, try, and save the best AI tools in one place"
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "unifai",
+    "repo": "unifai-mall"
+  }
+}
+

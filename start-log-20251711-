@@ -1,0 +1,13 @@
+[Mon 11/17/2025  4:23:52.17] Starting UnifAI Ultimate Launcher  42352.txt
+[Mon 11/17/2025  4:23:52.28] Node.js version: v22.13.1  42352.txt
+[Mon 11/17/2025  4:23:52.60] npm version: v10.9.2  42352.txt
+[Mon 11/17/2025  4:23:52.61] WARNING: Not a git repository  42352.txt
+[Mon 11/17/2025  4:23:52.61] Installing npm packages...  42352.txt
+[Mon 11/17/2025  4:23:57.32] node_modules: 634 packages  42352.txt
+[Mon 11/17/2025  4:23:57.34] Internet connection: OK  42352.txt
+[Mon 11/17/2025  4:23:57.34] WARNING: No internet connection  42352.txt
+[Mon 11/17/2025  4:23:57.38] Free disk space: 620746477568  42352.txt
+[Mon 11/17/2025  4:23:57.65] WARNING: Supabase connection check failed  42352.txt
+[Mon 11/17/2025  4:23:57.68] Port 5173: Available  42352.txt
+[Mon 11/17/2025  4:23:59.23] User selected option: 2  42352.txt
+[Mon 11/17/2025  4:23:59.24] Starting Electron App  42352.txt

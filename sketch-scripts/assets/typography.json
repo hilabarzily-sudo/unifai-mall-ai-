@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifAI Typography System",
+  "version": "1.0.0",
+  "fontFamily": {
+    "primary": "SF Pro Display, -apple-system, system-ui",
+    "fallback": "Arial, sans-serif",
+    "hebrew": "SF Pro Display, Arial Hebrew, Arial"
+  },
+  "fontSize": {
+    "display-xl": {
+      "size": 56,
+      "lineHeight": 64,
+      "weight": 700
+    },
+    "display-lg": {
+      "size": 48,
+      "lineHeight": 56,
+      "weight": 700
+    },
+    "display": {
+      "size": 36,
+      "lineHeight": 44,
+      "weight": 700
+    },
+    "heading-1": {
+      "size": 32,
+      "lineHeight": 40,
+      "weight": 700
+    },
+    "heading-2": {
+      "size": 28,
+      "lineHeight": 36,
+      "weight": 600
+    },
+    "heading-3": {
+      "size": 24,
+      "lineHeight": 32,
+      "weight": 600
+    },
+    "heading-4": {
+      "size": 20,
+      "lineHeight": 28,
+      "weight": 600
+    },
+    "heading-5": {
+      "size": 18,
+      "lineHeight": 26,
+      "weight": 600
+    },
+    "body-large": {
+      "size": 18,
+      "lineHeight": 28,
+      "weight": 400
+    },
+    "body": {
+      "size": 16,
+      "lineHeight": 24,
+      "weight": 400
+    },
+    "body-medium": {
+      "size": 15,
+      "lineHeight": 24,
+      "weight": 400
+    },
+    "body-small": {
+      "size": 14,
+      "lineHeight": 22,
+      "weight": 400
+    },
+    "caption": {
+      "size": 13,
+      "lineHeight": 20,
+      "weight": 400
+    },
+    "caption-small": {
+      "size": 12,
+      "lineHeight": 18,
+      "weight": 400
+    },
+    "overline": {
+      "size": 11,
+      "lineHeight": 16,
+      "weight": 500,
+      "letterSpacing": 0.5,
+      "textTransform": "uppercase"
+    }
+  },
+  "fontWeight": {
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800
+  },
+  "lineHeight": {
+    "none": 1.0,
+    "tight": 1.25,
+    "snug": 1.375,
+    "normal": 1.5,
+    "relaxed": 1.625,
+    "loose": 2.0
+  }
+}
+

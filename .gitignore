@@ -1,31 +1,30 @@
 # Dependencies
 node_modules/
-.pnp
-.pnp.js
+package-lock.json
 
-# Testing
-coverage/
-
-# Production
+# Build outputs
 dist/
 build/
-
-# Misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.vite/
+*.local
 
 # Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Editor directories and files
+# Environment files
+.env
+.env.local
+.env.production
+.env.*.local
+environments/*.env
+
+# IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -36,22 +35,40 @@ lerna-debug.log*
 *.sln
 *.sw?
 
-# Vite
-.vite
-dist-ssr
-*.local
+# OS
+Thumbs.db
 
-# Optional npm cache directory
-.npm
+# Android
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.ap_
+*.aab
 
-# Optional eslint cache
-.eslintcache
+# iOS
+ios/App/Pods/
+ios/App/*.xcworkspace
+!ios/App/App.xcworkspace
+*.ipa
+*.dSYM.zip
+*.dSYM
 
-# Optional REPL history
-.node_repl_history
+# Capacitor
+.capacitor/
 
 # Temporary files
 *.tmp
 *.temp
-.cache/
+start-log-*.txt
 
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.cache/
+.parcel-cache/
+.next/
+out/

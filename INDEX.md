@@ -1,344 +1,399 @@
-# 📑 UnifAI Screens – Complete Index
+# 🏢 UnifAI Mall - Master Index
 
-**תיעוד מלא לכל הקבצים בפרויקט**
+**Professional Project Directory**
 
 ---
 
-## 📂 מבנה הפרויקט
+## 📊 Project Information
+
+| Property | Value |
+|----------|-------|
+| **Project Name** | UnifAI - AI Tools Marketplace |
+| **Type** | Multi-Platform Application |
+| **Platforms** | Web, Mobile (iOS/Android), Desktop (Electron) |
+| **Tech Stack** | React + Vite + Capacitor + Supabase |
+| **Design System** | OS26 + Glassmorphism |
+| **Status** | ✅ Production Ready |
+| **Version** | 1.0.0 |
+
+---
+
+## 🗂️ Quick Navigation
+
+### 🎨 For Designers
+
+| Resource | Location | Description |
+|----------|----------|-------------|
+| **Sketch Scripts** | [`sketch-scripts/`](./sketch-scripts/) | 14 סקריפטים מסודרים |
+| **Index** | [`sketch-scripts/INDEX.md`](./sketch-scripts/INDEX.md) | מפת Sketch Scripts |
+| **Quick Start** | [`sketch-scripts/QUICK_START.md`](./sketch-scripts/QUICK_START.md) | התחלה ב-2 דקות |
+| **Design System** | [`sketch-scripts/docs/DESIGN_SYSTEM.md`](./sketch-scripts/docs/DESIGN_SYSTEM.md) | מערכת עיצוב מלאה |
+| **Color Palette** | [`sketch-scripts/assets/colors.json`](./sketch-scripts/assets/colors.json) | פלטת צבעים |
+| **Typography** | [`sketch-scripts/assets/typography.json`](./sketch-scripts/assets/typography.json) | מערכת פונטים |
+
+### 💻 For Developers
+
+| Resource | Location | Description |
+|----------|----------|-------------|
+| **Main README** | [`README.md`](./README.md) | מדריך ראשי |
+| **Installation** | [`docs/setup/INSTALLATION.md`](./docs/setup/INSTALLATION.md) | התקנה |
+| **Quick Start** | [`docs/setup/QUICK_START.md`](./docs/setup/QUICK_START.md) | התחלה מהירה |
+| **Project Structure** | [`docs/reference/PROJECT_STRUCTURE.md`](./docs/reference/PROJECT_STRUCTURE.md) | מבנה מלא |
+| **Deployment** | [`docs/deployment/DEPLOYMENT_GUIDE.md`](./docs/deployment/DEPLOYMENT_GUIDE.md) | הוראות פריסה |
+| **Screen Components** | [`src/components/screens/`](./src/components/screens/) | 14 React Screens |
+| **Services** | [`src/services/`](./src/services/) | Business Logic |
+
+### 🔧 For DevOps
+
+| Resource | Location | Description |
+|----------|----------|-------------|
+| **Docker** | [`docker-compose.yml`](./docker-compose.yml) | Docker setup |
+| **CI/CD** | [`vercel.json`](./vercel.json), [`netlify.toml`](./netlify.toml) | Deployment configs |
+| **Database Scripts** | [`scripts/database/`](./scripts/database/) | DB management |
+| **Build Scripts** | [`scripts/build/`](./scripts/build/) | Build automation |
+| **Environments** | [`environments/`](./environments/) | Env configs |
+| **Platform Setup** | [`docs/deployment/PLATFORM_SETUP.md`](./docs/deployment/PLATFORM_SETUP.md) | Platform configs |
+
+### 📱 For Mobile
+
+| Resource | Location | Description |
+|----------|----------|-------------|
+| **Mobile Guide** | [`docs/deployment/MOBILE_SETUP_GUIDE.md`](./docs/deployment/MOBILE_SETUP_GUIDE.md) | Mobile setup |
+| **Android** | [`android/`](./android/) | Android code |
+| **iOS** | [`ios/`](./ios/) | iOS code |
+| **Capacitor** | [`capacitor.config.json`](./capacitor.config.json) | Capacitor config |
+
+### 🖥️ For Desktop
+
+| Resource | Location | Description |
+|----------|----------|-------------|
+| **Electron Guide** | [`docs/ELECTRON.md`](./docs/ELECTRON.md) | Electron setup |
+| **Electron Code** | [`electron/`](./electron/) | Electron files |
+| **Start Script** | [`START_ELECTRON_CLEAN.bat`](./START_ELECTRON_CLEAN.bat) | Launch Electron |
+
+---
+
+## 📁 Project Structure Overview
 
 ```
-unifai-mall/screens/
+unifai-mall-ai/
 │
-├── 🎨 SCREEN COMPONENTS (14 files)
-│   ├── 01-SplashScreen.jsx          # Splash screen with animation
-│   ├── 02-AuthPopup.jsx             # Authentication popup
-│   ├── 03-HomePage.jsx              # Home page (Wolt logic)
-│   ├── 04-ToolPage.jsx              # Tool details page
-│   ├── 05-ExamplesGrid.jsx          # Pinterest-style examples
-│   ├── 06-ExampleViewer.jsx         # Sora-style example viewer
-│   ├── 07-PromptRevealSheet.jsx    # Prompt reveal bottom sheet
-│   ├── 08-ToolWebView.jsx           # Tool webview popup
-│   ├── 09-FavoritesPage.jsx         # Favorites page
-│   ├── 10-SavedPromptsSlider.jsx   # Saved prompts slider
-│   ├── 11-SearchPage.jsx            # Universal search
-│   ├── 12-AccountPage.jsx           # User account page
-│   ├── 13-AccountSettingsSheet.jsx # Settings bottom sheet
-│   └── 14-EmptyState.jsx            # Empty state component
+├── 🎨 DESIGN & UI
+│   └── sketch-scripts/                # Sketch design scripts (26 files)
+│       ├── screens/                   # 14 screen scripts
+│       ├── docs/                      # Design documentation
+│       ├── assets/                    # Design tokens (JSON)
+│       ├── examples/                  # Usage examples
+│       ├── INDEX.md                   # Sketch index
+│       └── README.md                  # Complete guide
 │
-├── 🚀 MAIN APP FILES
-│   ├── App.jsx                      # Complete app with navigation
-│   ├── main.jsx                     # React entry point
-│   ├── index.html                   # HTML template
-│   └── index.css                    # Global styles + Tailwind
+├── 💻 SOURCE CODE
+│   ├── src/                           # Main source code
+│   │   ├── components/                # React components
+│   │   │   └── screens/               # 14 Screen components
+│   │   ├── services/                  # 6 Business services
+│   │   ├── lib/                       # Libraries
+│   │   ├── utils/                     # Utilities
+│   │   └── hooks/                     # Custom hooks
+│   ├── App.jsx                        # Main app
+│   └── index.html                     # HTML template (Vite entry)
+│
+├── 📱 MOBILE PLATFORMS
+│   ├── android/                       # Android app
+│   ├── ios/                           # iOS app
+│   └── capacitor.config.json          # Capacitor config
+│
+├── 🖥️ DESKTOP PLATFORM
+│   ├── electron/                      # Electron app
+│   └── START_ELECTRON_CLEAN.bat       # Start script
 │
 ├── ⚙️ CONFIGURATION
-│   ├── package.json                 # Dependencies & scripts
-│   ├── vite.config.js               # Vite configuration
-│   ├── tailwind.config.js           # Tailwind + OS26 config
-│   ├── postcss.config.js            # PostCSS configuration
-│   └── .gitignore                   # Git ignore rules
+│   ├── package.json                   # Dependencies
+│   ├── vite.config.js                 # Vite config
+│   ├── tailwind.config.js             # Tailwind config
+│   └── 15+ other configs              # Various configs
 │
-└── 📚 DOCUMENTATION
-    ├── INDEX.md                     # This file
-    ├── README.md                    # Main documentation
-    ├── VISUAL_GUIDE.md              # Visual screen reference
-    └── INSTALLATION.md              # Setup instructions
+├── 📜 SCRIPTS
+│   ├── scripts/                       # Organized scripts
+│   │   ├── database/                  # DB scripts
+│   │   ├── build/                     # Build scripts
+│   │   └── utils/                     # Utility scripts
+│   └── *.bat                          # Windows batch files
+│
+├── 📚 DOCUMENTATION (Organized by topic)
+│   ├── docs/                          # All documentation
+│   │   ├── setup/                     # Installation & setup guides
+│   │   ├── guides/                    # How-to guides
+│   │   ├── deployment/                # Deployment & platforms
+│   │   ├── status/                    # Status reports
+│   │   ├── reference/                 # Reference materials
+│   │   ├── ARCHITECTURE.md            # System architecture
+│   │   ├── CONTRIBUTING.md            # Contributing guide
+│   │   ├── ELECTRON.md                # Electron guide
+│   │   └── TESTING.md                 # Testing guide
+│   ├── README.md                      # Main readme (root)
+│   └── INDEX.md                       # This file (root)
+│
+├── 🧪 TESTING
+│   └── tests/                         # Test suites
+│       ├── unit/                      # Unit tests
+│       ├── integration/               # Integration tests
+│       └── e2e/                       # E2E tests
+│
+└── 📝 LOGS
+    └── logs/                          # Application logs
 ```
 
 ---
 
-## 🎯 Quick Start
+## 🚀 Quick Start Guides
 
-### 1️⃣ התקנה
+### 🎨 Design (Sketch)
+```
+1. Go to: sketch-scripts/
+2. Read: QUICK_START.md (2 minutes)
+3. Run: screens/01-SplashScreen.js
+4. Done! ✅
+```
+
+### 💻 Development
 ```bash
-cd unifai-mall/screens/
-npm install
+1. npm install
+2. npm run dev
+3. Open: http://localhost:3000
 ```
 
-### 2️⃣ הפעלה
+### 📱 Mobile (Android)
 ```bash
-npm run dev
+1. npm run build
+2. npx cap sync android
+3. npx cap open android
 ```
 
-### 3️⃣ פתיחה בדפדפן
-```
-http://localhost:3000
-```
-
----
-
-## 📋 רשימת Screens
-
-| # | Screen | File | Description |
-|---|--------|------|-------------|
-| 1 | Splash | `01-SplashScreen.jsx` | מסך פתיחה (1.2s) |
-| 2 | Auth | `02-AuthPopup.jsx` | התחברות/הרשמה |
-| 3 | Home | `03-HomePage.jsx` | דף הבית דינמי |
-| 4 | Tool | `04-ToolPage.jsx` | דף כלי מפורט |
-| 5 | Examples | `05-ExamplesGrid.jsx` | גלריית דוגמאות |
-| 6 | Viewer | `06-ExampleViewer.jsx` | צפייה בדוגמה |
-| 7 | Prompt | `07-PromptRevealSheet.jsx` | גילוי פרומפט |
-| 8 | WebView | `08-ToolWebView.jsx` | פתיחת כלי |
-| 9 | Favorites | `09-FavoritesPage.jsx` | מועדפים |
-| 10 | Prompts | `10-SavedPromptsSlider.jsx` | פרומפטים שמורים |
-| 11 | Search | `11-SearchPage.jsx` | חיפוש |
-| 12 | Account | `12-AccountPage.jsx` | חשבון משתמש |
-| 13 | Settings | `13-AccountSettingsSheet.jsx` | הגדרות |
-| 14 | Empty | `14-EmptyState.jsx` | מצב ריק |
-
----
-
-## 🎨 Design System
-
-### OS26 + Glassmorphism
-
-```css
-/* Glass Effect */
-background: rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(24px);
-border: 1px solid rgba(255, 255, 255, 0.2);
-border-radius: 16px-32px;
-box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
-```
-
-### Color Palette
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| BG Primary | `#f6f7fb` | Main background |
-| BG Secondary | `#eef1f8` | Gradient end |
-| Glass Light | `rgba(255,255,255,0.4)` | Cards |
-| Glass Strong | `rgba(255,255,255,0.6)` | Active elements |
-| Glass Intense | `rgba(255,255,255,0.8)` | Popups |
-| Primary Dark | `#111827` (gray-900) | Buttons |
-| Border | `rgba(255,255,255,0.2-0.4)` | Borders |
-
----
-
-## 🔄 User Flow
-
-```
-┌──────────────┐
-│   Splash     │ (1.2s auto)
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│   Home Page  │ ←─────────────┐
-└──────┬───────┘                │
-       │                        │
-  ┌────┴────┬─────┬─────┐      │
-  ↓         ↓     ↓     ↓       │
-Search   Tool  Favs  Account    │
-          │                     │
-     ┌────┴────┐                │
-     ↓         ↓                │
-  Example  WebView              │
-     │                          │
-     ↓                          │
-  Prompt ────────────────────→ Tool
+### 🖥️ Desktop (Electron)
+```bash
+1. Run: START_ELECTRON_CLEAN.bat
+2. App opens!
 ```
 
 ---
 
-## 📦 Dependencies
+## 📊 Project Statistics
 
-### Production
-```json
-{
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0"
-}
+### Code Base
+```
+Total Files:              100+
+Lines of Code:            ~15,000+
+React Components:         14 screens
+Services:                 6
+Configuration Files:      15+
+Documentation Files:      35+
+Test Files:               6
 ```
 
-### Development
-```json
-{
-  "@vitejs/plugin-react": "^4.2.1",
-  "tailwindcss": "^3.4.0",
-  "autoprefixer": "^10.4.16",
-  "postcss": "^8.4.32",
-  "vite": "^5.0.8"
-}
+### Sketch Scripts
+```
+Screen Scripts:           14
+Documentation Pages:      6
+Design Tokens (JSON):     3
+Examples:                 3
+Total Lines:              ~5,000
+```
+
+### Platforms
+```
+✅ Web (PWA)
+✅ iOS (Native)
+✅ Android (Native)
+✅ Electron (Desktop)
 ```
 
 ---
 
-## 🛠️ Scripts
+## 📚 Essential Documentation
+
+### Getting Started
+1. [`README.md`](./README.md) - Start here
+2. [`docs/setup/INSTALLATION.md`](./docs/setup/INSTALLATION.md) - Installation guide
+3. [`docs/setup/QUICK_START.md`](./docs/setup/QUICK_START.md) - Quick start
+4. [`docs/setup/START_HERE.md`](./docs/setup/START_HERE.md) - Beginner guide
+5. [`docs/setup/SETUP.md`](./docs/setup/SETUP.md) - Setup guide
+6. [`docs/setup/QUICK_SETUP.md`](./docs/setup/QUICK_SETUP.md) - Quick setup
+7. [`docs/setup/RUN.md`](./docs/setup/RUN.md) - Run instructions
+8. [`docs/setup/ENV_SETUP_INSTRUCTIONS.md`](./docs/setup/ENV_SETUP_INSTRUCTIONS.md) - Environment
+
+### Project Information
+9. [`docs/reference/PROJECT_STRUCTURE.md`](./docs/reference/PROJECT_STRUCTURE.md) - Complete structure
+10. [`docs/reference/ORGANIZATION_SUMMARY.md`](./docs/reference/ORGANIZATION_SUMMARY.md) - Organization overview
+11. [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) - Architecture details
+12. [`docs/reference/SUMMARY.md`](./docs/reference/SUMMARY.md) - Project summary
+
+### How-To Guides
+13. [`docs/guides/COMPLETE_GUIDE.md`](./docs/guides/COMPLETE_GUIDE.md) - Complete guide
+14. [`docs/guides/VISUAL_GUIDE.md`](./docs/guides/VISUAL_GUIDE.md) - Visual guide
+15. [`docs/guides/🚀_START_HERE_🚀.md`](./docs/guides/🚀_START_HERE_🚀.md) - Start guide
+
+### Deployment & Production
+16. [`docs/deployment/DEPLOYMENT_GUIDE.md`](./docs/deployment/DEPLOYMENT_GUIDE.md) - Deployment
+17. [`docs/deployment/PLATFORM_SETUP.md`](./docs/deployment/PLATFORM_SETUP.md) - Platform setup
+18. [`docs/deployment/MOBILE_SETUP_GUIDE.md`](./docs/deployment/MOBILE_SETUP_GUIDE.md) - Mobile setup
+19. [`docs/deployment/MARKETPLACE_UPGRADE_GUIDE.md`](./docs/deployment/MARKETPLACE_UPGRADE_GUIDE.md) - Marketplace upgrade
+20. [`docs/deployment/ELECTRON_FIX.md`](./docs/deployment/ELECTRON_FIX.md) - Electron fixes
+21. [`docs/deployment/ELECTRON_FIXES.md`](./docs/deployment/ELECTRON_FIXES.md) - More Electron fixes
+22. [`docs/deployment/FIX_ELECTRON_ISSUES.md`](./docs/deployment/FIX_ELECTRON_ISSUES.md) - Electron issues
+
+### Status & Progress
+23. [`docs/status/WEBVIEW_STATUS.md`](./docs/status/WEBVIEW_STATUS.md) - WebView status
+24. [`docs/status/FINAL_STATUS.md`](./docs/status/FINAL_STATUS.md) - Final status
+25. [`docs/status/FINAL_SETUP_COMPLETE.md`](./docs/status/FINAL_SETUP_COMPLETE.md) - Setup complete
+26. [`docs/status/READY_FOR_ALL_PLATFORMS.md`](./docs/status/READY_FOR_ALL_PLATFORMS.md) - Platform readiness
+
+### Reference Materials
+27. [`docs/reference/QUICK_REFERENCE.md`](./docs/reference/QUICK_REFERENCE.md) - Quick reference
+28. [`docs/reference/CHECKLIST.md`](./docs/reference/CHECKLIST.md) - Checklists
+29. [`docs/reference/CHANGELOG.md`](./docs/reference/CHANGELOG.md) - Version history
+30. [`docs/reference/LAUNCHERS_SUMMARY.md`](./docs/reference/LAUNCHERS_SUMMARY.md) - Launcher summary
+31. [`docs/reference/LAUNCHER_COMPARISON.md`](./docs/reference/LAUNCHER_COMPARISON.md) - Launcher comparison
+32. [`docs/reference/README_DOCS.md`](./docs/reference/README_DOCS.md) - Docs overview
+33. [`docs/reference/README_PRODUCTION.md`](./docs/reference/README_PRODUCTION.md) - Production readme
+34. [`docs/reference/✅_CREATED_FILES_✅.md`](./docs/reference/✅_CREATED_FILES_✅.md) - Created files
+
+### Technical Documentation
+35. [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md) - Contributing guide
+36. [`docs/TESTING.md`](./docs/TESTING.md) - Testing guide
+37. [`docs/ELECTRON.md`](./docs/ELECTRON.md) - Electron documentation
+
+---
+
+## 🛠️ Development Scripts
 
 ```bash
 # Development
-npm run dev          # Start dev server (port 3000)
+npm run dev              # Start dev server
+npm run build            # Build for production
+npm run preview          # Preview production build
 
-# Production
-npm run build        # Build for production
-npm run preview      # Preview production build
+# Mobile
+npm run mobile:android   # Run on Android
+npm run mobile:ios       # Run on iOS
+npx cap sync            # Sync native platforms
+
+# Desktop
+# Windows: Run START_ELECTRON_CLEAN.bat
+# Mac/Linux: npm run electron
+
+# Testing
+npm test                 # Run tests
+npm run test:unit       # Unit tests
+npm run test:e2e        # E2E tests
+
+# Database
+node scripts/database/populateToolsData.js    # Populate data
+node scripts/database/checkDatabase.js        # Check database
+node scripts/utils/verify-setup.js            # Verify setup
 ```
 
 ---
 
-## 📄 Documentation Files
+## 🎯 Common Tasks
 
-### README.md
-- מדריך ראשי
-- Props reference לכל component
-- דוגמאות שימוש
-- TypeScript interfaces
+### For New Team Members
+1. Read: [`README.md`](./README.md)
+2. Follow: [`docs/setup/INSTALLATION.md`](./docs/setup/INSTALLATION.md)
+3. Run: `npm install && npm run dev`
+4. Explore: [`docs/reference/PROJECT_STRUCTURE.md`](./docs/reference/PROJECT_STRUCTURE.md)
 
-### VISUAL_GUIDE.md
-- תיעוד ויזואלי של כל screen
-- ASCII art representations
-- Navigation flow diagrams
-- Design tokens
+### For Designers
+1. Open: [`sketch-scripts/`](./sketch-scripts/)
+2. Read: [`sketch-scripts/INDEX.md`](./sketch-scripts/INDEX.md)
+3. Run: Scripts in order (01-14)
+4. Export: Assets for developers
 
-### INSTALLATION.md
-- הוראות התקנה מפורטות
-- 3 שיטות התקנה שונות
-- Troubleshooting
-- Tips & tricks
+### For Developers
+1. Clone repository
+2. Install dependencies: `npm install`
+3. Copy env files: `environments/dev.env` → `.env`
+4. Start: `npm run dev`
 
----
-
-## 🎓 How to Use
-
-### דוגמה בסיסית
-
-```jsx
-import SplashScreen from './01-SplashScreen';
-import HomePage from './03-HomePage';
-
-function MyApp() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  return showSplash ? (
-    <SplashScreen onComplete={() => setShowSplash(false)} />
-  ) : (
-    <HomePage isLoggedIn={false} />
-  );
-}
-```
-
-### Flow מלא
-
-ראה `App.jsx` לדוגמה מלאה עם:
-- ✅ State management
-- ✅ Navigation logic
-- ✅ Auth triggers
-- ✅ Bottom navigation
-- ✅ All screen transitions
+### For QA
+1. Review: [`docs/reference/CHECKLIST.md`](./docs/reference/CHECKLIST.md)
+2. Follow: [`docs/TESTING.md`](./docs/TESTING.md)
+3. Run: `npm test`
+4. Report: Issues on GitHub
 
 ---
 
-## 🧩 Component Categories
+## 🏢 Enterprise Features
 
-### 🎬 Screens (Full Pages)
-1. SplashScreen
-2. HomePage
-3. ToolPage
-4. ExamplesGrid
-5. FavoritesPage
-6. SearchPage
-7. AccountPage
+### ✅ Code Organization
+- Modular architecture
+- Separation of concerns
+- Scalable structure
+- Clean code principles
 
-### 📱 Popups & Modals
-1. AuthPopup
-2. ExampleViewer
-3. ToolWebView
-4. PromptRevealSheet
-5. AccountSettingsSheet
+### ✅ Documentation
+- 35+ documentation files
+- Step-by-step guides
+- Code examples
+- Troubleshooting guides
 
-### 🧩 Sub-Components
-1. SavedPromptsSlider
-2. EmptyState
+### ✅ Multi-Platform
+- Web (PWA)
+- iOS (Native)
+- Android (Native)
+- Desktop (Electron)
 
----
+### ✅ Design System
+- Complete Sketch scripts
+- Design tokens (JSON)
+- Consistent styling
+- OS26 + Glassmorphism
 
-## 🔧 Customization
-
-### עריכת צבעים
-
-ערוך `tailwind.config.js`:
-
-```javascript
-colors: {
-  'unifai': {
-    bg: {
-      primary: '#yourColor',
-    },
-  },
-}
-```
-
-### עריכת אנימציות
-
-ערוך `index.css`:
-
-```css
-@keyframes yourAnimation {
-  /* ... */
-}
-```
+### ✅ Development Tools
+- Vite for fast builds
+- Tailwind CSS for styling
+- Jest for testing
+- Playwright for E2E
 
 ---
 
-## 📊 Statistics
+## 📞 Support & Resources
 
-- **Total Files:** 23
-- **Screen Components:** 14
-- **Configuration Files:** 5
-- **Documentation Files:** 4
-- **Lines of Code:** ~5,000
-- **Design System:** OS26 + Glassmorphism
-- **Framework:** React 18
-- **Build Tool:** Vite 5
-- **CSS Framework:** Tailwind CSS 3
+### Documentation
+- Start with [`README.md`](./README.md)
+- Check [`sketch-scripts/docs/TROUBLESHOOTING.md`](./sketch-scripts/docs/TROUBLESHOOTING.md)
+- Review [`docs/reference/QUICK_REFERENCE.md`](./docs/reference/QUICK_REFERENCE.md)
 
----
+### Community
+- Open issues on GitHub
+- Review [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md)
+- Join discussions
 
-## 🚀 Next Steps
-
-1. **עיין ב-VISUAL_GUIDE.md** לראות את כל המסכים
-2. **קרא את README.md** להבנה מעמיקה
-3. **הרץ `App.jsx`** לראות את ה-demo המלא
-4. **התאם אישית** לפרויקט שלך
-5. **חבר ל-Backend** (Supabase / Firebase)
-6. **Deploy** לפרודקשן
-
----
-
-## 📞 Support
-
-- **Documentation:** README.md, VISUAL_GUIDE.md, INSTALLATION.md
-- **Design Reference:** OS26.design
-- **Tailwind Docs:** tailwindcss.com
-- **React Docs:** react.dev
+### External Resources
+- [Sketch API Docs](https://developer.sketch.com)
+- [React Documentation](https://react.dev)
+- [Capacitor Docs](https://capacitorjs.com)
+- [Vite Documentation](https://vitejs.dev)
 
 ---
 
 ## 📜 License
 
-MIT License - Free to use and modify
+MIT License - See [`LICENSE`](./LICENSE) for details
 
 ---
 
-## 🎉 Features Summary
+## 🎉 Ready to Start?
 
-✅ 14 Complete Screens  
-✅ OS26 Design System  
-✅ Glassmorphism Styling  
-✅ Responsive Design  
-✅ RTL Support (Hebrew)  
-✅ Dark Mode Ready  
-✅ Accessibility (ARIA)  
-✅ Smooth Animations  
-✅ Mock Data Included  
-✅ TypeScript Ready  
-✅ Production Ready  
-✅ Vite + React 18  
-✅ Tailwind CSS 3  
+Choose your path:
+
+**👨‍💻 Developer?** → Start with [`README.md`](./README.md)  
+**🎨 Designer?** → Start with [`sketch-scripts/INDEX.md`](./sketch-scripts/INDEX.md)  
+**📱 Mobile?** → Start with [`docs/deployment/MOBILE_SETUP_GUIDE.md`](./docs/deployment/MOBILE_SETUP_GUIDE.md)  
+**🚀 Deploy?** → Start with [`docs/deployment/DEPLOYMENT_GUIDE.md`](./docs/deployment/DEPLOYMENT_GUIDE.md)
 
 ---
 
-**Created for UnifAI | Spotify for AI Tools**  
-**Version 1.0.0**  
-**2024**
-
+**Built with ❤️ by the UnifAI Team**  
+**Professional Enterprise Organization**  
+**Version 1.0.0 | November 17, 2024**
