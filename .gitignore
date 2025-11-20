@@ -67,8 +67,20 @@ start-log-*.txt
 coverage/
 .nyc_output/
 
+# Turborepo
+.turbo
+
 # Misc
 .cache/
 .parcel-cache/
 .next/
 out/
+
+# Monorepo specific
+apps/*/node_modules
+packages/*/node_modules
+apps/*/.next
+apps/*/dist
+apps/*/build
+packages/*/dist
+packages/*/build
